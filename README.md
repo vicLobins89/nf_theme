@@ -1,2 +1,3 @@
 # nf_theme
-Noble
+WordPress theme for Noble Foods website
+- Vic Lobins
