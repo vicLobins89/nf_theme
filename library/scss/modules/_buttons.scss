@@ -1,0 +1,66 @@
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Button Styles
+
+Helpful Links:
+http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+
+******************************************************************/
+
+/*********************
+BUTTON DEFAULTS
+
+Quick video guide:
+http://www.youtube.com/watch?v=hwdVpKiJzac
+
+*********************/
+
+%btn {
+  display: inline-block;
+  position: relative;
+  font-family: $sans-serif;
+  text-decoration: none;
+  color: $white;
+  font-size: 0.9em;
+  font-size: 34px;
+  line-height: 34px;
+  font-weight: normal;
+  padding: 0 24px;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  @include transition(background-color 0.14s ease-in-out);
+
+  // hovering on the btn
+  &:hover, &:focus {
+    color: $white;
+    text-decoration: none;
+    outline: none;
+  } // end hover
+
+  // clicking on the button
+  &:active {
+    top: 1px; // adds a tiny hop to the click
+  } // end active
+
+} // end .button
+
+/*
+An example button.
+*/
+.blue-btn {
+  @extend %btn; // here we load the btn defaults
+  background-color: $alert-blue;
+
+  &:hover,
+  &:focus {
+    background-color: darken($alert-blue, 4%);
+  } // end hover
+
+  &:active {
+    background-color: darken($alert-blue, 5%);
+  } // end active
+
+} // end blue button

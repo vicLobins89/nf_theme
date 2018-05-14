@@ -1,0 +1,215 @@
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: TinyMCE Editor
+
+This stylesheet is loaded automatically by Wordpress when compiled
+and placed in the root theme directory folder as editor-style.css
+
+For more info, check out the codex:
+http://codex.wordpress.org/Editor_Style
+
+******************************************************************/
+/* Wrap the entire post style inside the TinyMCE selector, as suggested
+here http://codex.wordpress.org/Function_Reference/add_editor_style */
+body#tinymce.wp-editor {
+  /******************************************************************
+  Site Name: Honey
+  Author: Vic Lobins
+  
+  Stylesheet: Variables
+  
+  ******************************************************************/
+  /*********************
+  COLORS
+  Choosing your colors http://0to255.com/
+  *********************/
+  /******************************************************************
+  Site Name: Honey
+  Author: Vic Lobins
+  
+  Stylesheet: Typography
+  
+  ******************************************************************/
+  /*********************
+  FONT FACE
+  *********************/
+  /*
+  Typographical defaults: http://www.newnet-soft.com/blog/csstypography
+  */
+  /******************************************************************
+  Site Name: Honey
+  Author: Vic Lobins
+  
+  Stylesheet: Sass Functions
+  
+  ******************************************************************/
+  /*********************
+  COLOR FUNCTIONS
+  
+  Quicker way to write RGBA.
+  
+  Example:
+  box-shadow: 0 0 4px black(0.3);
+  compiles to:
+  box-shadow: 0 0 4px rgba(0,0,0,0.3);
+  *********************/
+  /*********************
+  RESPONSIVE HELPER FUNCTION
+  
+  Helper function for calculating target / context.
+  
+  Example:
+  width: cp(650px, 1000px);
+  or
+  width: calc-percent(650px, 1000px);
+  both compile to:
+  width: 65%;
+  *********************/
+  /******************************************************************
+  Site Name: Honey
+  Author: Vic Lobins
+  
+  Stylesheet: Mixins Stylesheet
+  
+  Helpful:
+  http://sachagreif.com/useful-sass-mixins/
+  http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+  http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+  
+  ******************************************************************/
+  /*********************
+  TRANSITION
+  *********************/
+  /* @include transition(all 0.2s ease-in-out); */
+  /*********************
+  CSS3 GRADIENTS
+  *********************/
+  /* @include css-gradient(#dfdfdf,#f8f8f8); */
+  /*********************
+  BOX SIZING
+  *********************/
+  /* @include box-sizing(border-box); */
+  width: auto;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  /*********************
+	LINK STYLES
+	*********************/
+  /******************************************************************
+  H1, H2, H3, H4, H5 STYLES
+  ******************************************************************/
+  padding: 1.5em 1.5em 0;
+  /*********************
+  LARGER MOBILE DEVICES
+  *********************/ }
+  body#tinymce.wp-editor p {
+    -ms-word-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word; }
+  body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
+    color: #000;
+    /* on hover */
+    /* on click */ }
+    body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:focus, body#tinymce.wp-editor a:visited:hover, body#tinymce.wp-editor a:visited:focus {
+      color: #1a1a1a; }
+    body#tinymce.wp-editor a:link, body#tinymce.wp-editor a:visited:link {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+  body#tinymce.wp-editor h1, body#tinymce.wp-editor .h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor .h2, body#tinymce.wp-editor h3, body#tinymce.wp-editor .h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor .h4, body#tinymce.wp-editor h5, body#tinymce.wp-editor .h5 {
+    text-rendering: optimizelegibility;
+    font-weight: 500; }
+    body#tinymce.wp-editor h1 a, body#tinymce.wp-editor .h1 a, body#tinymce.wp-editor h2 a, body#tinymce.wp-editor .h2 a, body#tinymce.wp-editor h3 a, body#tinymce.wp-editor .h3 a, body#tinymce.wp-editor h4 a, body#tinymce.wp-editor .h4 a, body#tinymce.wp-editor h5 a, body#tinymce.wp-editor .h5 a {
+      text-decoration: none; }
+  body#tinymce.wp-editor h1, body#tinymce.wp-editor .h1 {
+    font-size: 2.5em;
+    line-height: 1.333em; }
+  body#tinymce.wp-editor h2, body#tinymce.wp-editor .h2 {
+    font-size: 1.75em;
+    line-height: 1.4em;
+    margin-bottom: 0.375em; }
+  body#tinymce.wp-editor h3, body#tinymce.wp-editor .h3 {
+    font-size: 1.125em; }
+  body#tinymce.wp-editor h4, body#tinymce.wp-editor .h4 {
+    font-size: 1.1em;
+    font-weight: 700; }
+  body#tinymce.wp-editor h5, body#tinymce.wp-editor .h5 {
+    font-size: 0.846em;
+    line-height: 2.09em;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+  body#tinymce.wp-editor p {
+    margin: 0 0 1.5em; }
+  body#tinymce.wp-editor table {
+    width: 100%;
+    border: 1px solid #212121;
+    margin-bottom: 1.5em; }
+    body#tinymce.wp-editor table caption {
+      margin: 0 0 7px;
+      font-size: 0.75em;
+      color: #9fa6b4;
+      text-transform: uppercase;
+      letter-spacing: 1px; }
+  body#tinymce.wp-editor tr {
+    border-bottom: 1px solid #212121; }
+    body#tinymce.wp-editor tr:nth-child(even) {
+      background-color: #e6e6e6; }
+  body#tinymce.wp-editor td {
+    padding: 7px;
+    border-right: 1px solid #212121; }
+    body#tinymce.wp-editor td:last-child {
+      border-right: 0; }
+  body#tinymce.wp-editor th {
+    background-color: #e6e6e6;
+    border-bottom: 1px solid #212121;
+    border-right: 1px solid #212121; }
+    body#tinymce.wp-editor th:last-child {
+      border-right: 0; }
+  body#tinymce.wp-editor blockquote {
+    margin: 0 0 1.5em 0.75em;
+    padding: 0 0 0 0.75em;
+    border-left: 3px solid #e67410;
+    font-style: italic;
+    color: #9fa6b4; }
+  body#tinymce.wp-editor dd {
+    margin-left: 0;
+    font-size: 0.9em;
+    color: #787878;
+    margin-bottom: 1.5em; }
+  body#tinymce.wp-editor img {
+    margin: 0 0 1.5em 0;
+    max-width: 100%;
+    height: auto; }
+  body#tinymce.wp-editor .size-auto,
+  body#tinymce.wp-editor .size-full,
+  body#tinymce.wp-editor .size-large,
+  body#tinymce.wp-editor .size-medium,
+  body#tinymce.wp-editor .size-thumbnail {
+    max-width: 100%;
+    height: auto; }
+  body#tinymce.wp-editor pre {
+    background: #000;
+    color: #e6e6e6;
+    font-size: 0.9em;
+    padding: 1.5em;
+    margin: 0 0 1.5em;
+    border-radius: 3px; }
+  @media only screen and (min-width: 481px) {
+    body#tinymce.wp-editor {
+      /* at this larger size, we can start to align images */ }
+      body#tinymce.wp-editor .alignleft, body#tinymce.wp-editor img.alignleft {
+        margin-right: 1.5em;
+        display: inline;
+        float: left; }
+      body#tinymce.wp-editor .alignright, body#tinymce.wp-editor img.alignright {
+        margin-left: 1.5em;
+        display: inline;
+        float: right; }
+      body#tinymce.wp-editor .aligncenter, body#tinymce.wp-editor img.aligncenter {
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        clear: both; } }
