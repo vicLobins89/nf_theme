@@ -282,7 +282,6 @@ nav.main {
 .nav li {
   float: left; }
   .nav li a {
-    text-transform: uppercase;
     border-bottom: 0; }
 .nav.main-nav {
   float: right;
@@ -304,6 +303,18 @@ nav.main {
     letter-spacing: 1px;
     position: relative;
     overflow: hidden; }
+    .nav.main-nav > li > a.active:before {
+      width: 100%; }
+    .nav.main-nav > li > a:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 5px;
+      background: #e67410;
+      -webkit-transition: width 0.2s ease-in-out;
+      transition: width 0.2s ease-in-out; }
   .nav.main-nav > li:hover > a, .nav.main-nav > li:focus > a {
     color: #e67410; }
   .nav.main-nav ul.sub-menu,
@@ -388,7 +399,6 @@ nav.main {
     color: #000;
     text-decoration: none;
     padding: 0.75em 1.4em;
-    text-transform: uppercase;
     cursor: pointer;
     -webkit-transition: all 0.14s ease-in-out;
     transition: all 0.14s ease-in-out; }

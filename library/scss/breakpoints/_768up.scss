@@ -260,7 +260,6 @@ nav.main {
 			float: left;
 
 			a {
-				text-transform: uppercase;
 				border-bottom: 0;
 
 				&:hover, &:focus {
@@ -300,6 +299,23 @@ nav.main {
 				letter-spacing: 1px;
 				position: relative;
 				overflow: hidden;
+				
+				&.active {
+					&:before {
+						width: 100%;
+					}
+				}
+				
+				&:before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 0%;
+					height: 5px;
+					background: $orange;
+					@include transition(width 0.2s ease-in-out);
+				}
 			}
 			
 			&:hover, &:focus {
@@ -402,7 +418,6 @@ nav.main {
 				color: $black;
 				text-decoration: none;
 				padding: 0.75em 1.4em;
-				text-transform: uppercase;
 				cursor: pointer;
 				@include transition(all 0.14s ease-in-out);
 			}
