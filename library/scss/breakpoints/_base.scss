@@ -317,6 +317,52 @@ ul.team {
 	}
 }
 
+.location-cat {
+	padding-right: 2em;
+	
+	a {
+		display: block;
+    	margin: 0.5em 0 0.3em;
+		cursor: pointer;
+		font-weight: 600;
+    	font-size: 1.15em;
+		color: $black;
+		border-bottom: 2px solid $orange;
+	}
+	
+	.location {
+		max-height: 0px;
+		overflow: hidden;
+		@include transition(max-height 0.2s ease-in-out);
+		
+		span {
+			display: inline-block;
+			margin: 5px 0;
+			
+			&.left {
+				float: left;
+			}
+			
+			&.right {
+				float: right;
+				color: $orange;
+			}
+		}
+	}
+	
+	&.active {
+		.location {
+			max-height: 50px;
+		}
+	}
+}
+
+.locations-map {
+	.active {
+		fill: $orange;
+	}
+}
+
 /********************
 WORDPRESS BODY CLASSES
 ********************/

@@ -48,6 +48,20 @@ jQuery(document).ready(function($) {
 		});
 	}
 	
+	// Locations
+	
+	$('.location-cat a').on('click', function(){
+		var linkClass = $(this).attr('class');
+		if( linkClass === 'agriculture') {
+			$('.locations-map .st0').addClass('active');
+		} else {
+			$('.locations-map .st0').removeClass('active');
+			$('.locations-map .'+linkClass).addClass('active');
+		}
+		
+		$('.location-cat a').not(this).parent().removeClass('active');
+		$(this).parent().toggleClass('active');
+	});
 	
 	// Menu Functions
 	
