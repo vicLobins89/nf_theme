@@ -1184,7 +1184,7 @@ ul.team {
         float: right;
         color: #e67410; }
   .location-cat.active .location {
-    max-height: 50px; }
+    max-height: 100px; }
 
 .locations-map .active {
   fill: #e67410; }
