@@ -1249,42 +1249,42 @@ WORDPRESS BODY CLASSES
     .blog .post.main .post-data *, .archive .post.main .post-data * {
       color: #fff; }
 
-.blog .category-poultry.post, .single .category-poultry .page-title {
+.archive .category-poultry.post, .blog .category-poultry.post, .single .category-poultry .page-title {
   background: #bc2844; }
 .category-poultry.post .arrow-up {
   border-bottom-color: #bc2844; }
 .single .category-poultry .arrow-down {
   border-top-color: #bc2844; }
 
-.blog .category-farms.post, .single .category-farms .page-title {
+.archive .category-farms.post, .blog .category-farms.post, .single .category-farms .page-title {
   background: #e67410; }
 .category-farms.post .arrow-up {
   border-bottom-color: #e67410; }
 .single .category-farms .arrow-down {
   border-top-color: #e67410; }
 
-.blog .category-gu-deserts.post, .single .category-gu-deserts .page-title {
+.archive .category-gu-deserts.post, .blog .category-gu-deserts.post, .single .category-gu-deserts .page-title {
   background: #fcc100; }
 .category-gu-deserts.post .arrow-up {
   border-bottom-color: #fcc100; }
 .single .category-gu-deserts .arrow-down {
   border-top-color: #fcc100; }
 
-.blog .category-feed-milling.post, .single .category-feed-milling .page-title {
+.archive .category-feed-milling.post, .blog .category-feed-milling.post, .single .category-feed-milling .page-title {
   background: #0a5672; }
 .category-feed-milling.post .arrow-up {
   border-bottom-color: #0a5672; }
 .single .category-feed-milling .arrow-down {
   border-top-color: #0a5672; }
 
-.blog .category-eggs.post, .single .category-eggs .page-title {
+.archive .category-eggs.post, .blog .category-eggs.post, .single .category-eggs .page-title {
   background: #35a3a0; }
 .category-eggs.post .arrow-up {
   border-bottom-color: #35a3a0; }
 .single .category-eggs .arrow-down {
   border-top-color: #35a3a0; }
 
-.blog .category-our-business.post, .single .category-our-business .page-title {
+.archive .category-our-business.post, .blog .category-our-business.post, .single .category-our-business .page-title {
   background: #e67410; }
 .category-our-business.post .arrow-up {
   border-bottom-color: #e67410; }

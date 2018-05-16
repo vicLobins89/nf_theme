@@ -468,6 +468,7 @@ WORDPRESS BODY CLASSES
 }
 
 .category-poultry {
+	.archive &.post,
 	.blog &.post,
 	.single & .page-title { background: $red; }
 	&.post .arrow-up { border-bottom-color: $red;}
@@ -475,6 +476,7 @@ WORDPRESS BODY CLASSES
 }
 
 .category-farms {
+	.archive &.post,
 	.blog &.post,
 	.single & .page-title { background: $orange; }
 	&.post .arrow-up { border-bottom-color: $orange;}
@@ -482,6 +484,7 @@ WORDPRESS BODY CLASSES
 }
 
 .category-gu-deserts {
+	.archive &.post,
 	.blog &.post,
 	.single & .page-title { background: $yellow; }
 	&.post .arrow-up { border-bottom-color: $yellow;}
@@ -489,6 +492,7 @@ WORDPRESS BODY CLASSES
 }
 
 .category-feed-milling {
+	.archive &.post,
 	.blog &.post,
 	.single & .page-title { background: $dark-blue; }
 	&.post .arrow-up { border-bottom-color: $dark-blue;}
@@ -496,6 +500,7 @@ WORDPRESS BODY CLASSES
 }
 
 .category-eggs {
+	.archive &.post,
 	.blog &.post,
 	.single & .page-title { background: $light-blue; }
 	&.post .arrow-up { border-bottom-color: $light-blue;}
@@ -503,6 +508,7 @@ WORDPRESS BODY CLASSES
 }
 
 .category-our-business {
+	.archive &.post,
 	.blog &.post,
 	.single & .page-title { background: $orange; }
 	&.post .arrow-up { border-bottom-color: $orange;}
