@@ -21,16 +21,18 @@
 								<div class="featured-image">
 									<?php the_post_thumbnail('full'); ?>
 									<?php
-									if(get_field('hero_text')) {
-										echo '<div class="page-title" itemprop="headline" style="background: '.get_field('page_colour').';">
-												<h1>'.get_field('hero_text').'</h1>
-												<span class="arrow-down" style="border-top-color: '.get_field('page_colour').';"</span>
-											</div>';
-									} else {
-										echo '<div class="page-title" style="background: '.get_field('page_colour').';">
-												<h1 itemprop="headline">'.get_the_title().'</h1>
-												<span class="arrow-down" style="border-top-color: '.get_field('page_colour').';"></span>
-											</div>';
+									if( !get_field('hide_hero') ) {
+										if( get_field('hero_text') ) {
+											echo '<div class="page-title" itemprop="headline" style="background: '.get_field('page_colour').';">
+													<h1>'.get_field('hero_text').'</h1>
+													<span class="arrow-down" style="border-top-color: '.get_field('page_colour').';"</span>
+												</div>';
+										} else {
+											echo '<div class="page-title" style="background: '.get_field('page_colour').';">
+													<h1 itemprop="headline">'.get_the_title().'</h1>
+													<span class="arrow-down" style="border-top-color: '.get_field('page_colour').';"></span>
+												</div>';
+										}
 									}
 									?>
 								</div>
