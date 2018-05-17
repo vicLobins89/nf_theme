@@ -358,9 +358,28 @@ ul.team {
 }
 
 .locations-map {
+	position: relative;
+	
 	.active {
 		fill: $orange;
 	}
+	
+	svg {
+		width: 100%;
+		height: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	
+	img {
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+img[src*=".svg"] {
+  width: 100%; 
 }
 
 /********************

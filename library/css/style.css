@@ -1186,8 +1186,22 @@ ul.team {
   .location-cat.active .location {
     max-height: 100px; }
 
-.locations-map .active {
-  fill: #e67410; }
+.locations-map {
+  position: relative; }
+  .locations-map .active {
+    fill: #e67410; }
+  .locations-map svg {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .locations-map img {
+    visibility: hidden;
+    opacity: 0; }
+
+img[src*=".svg"] {
+  width: 100%; }
 
 /********************
 WORDPRESS BODY CLASSES

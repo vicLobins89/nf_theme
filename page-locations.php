@@ -72,7 +72,8 @@
 											</div>
 											
 											<div class="col-6 locations-map">
-											<?php echo file_get_contents(get_template_directory_uri() . '/library/images/uk-map-code.svg'); ?>
+												<img src="<?php echo get_template_directory_uri() . '/library/images/uk-map-code.svg'; ?>" alt="">
+												<?php echo file_get_contents(get_template_directory_uri() . '/library/images/uk-map-code.svg'); ?>
 											</div>
 										</section>
 								<?php endif; ?>
