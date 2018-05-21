@@ -2107,6 +2107,8 @@ TABLET & SMALLER LAPTOPS
     width: 50%; }
     .extra-images li:nth-child(3n+3):last-child {
       width: 100%; }
+    .extra-images li.full-width {
+      width: 100%; }
 
   ul.team li {
     width: 50%; }

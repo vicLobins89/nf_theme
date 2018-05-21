@@ -88,7 +88,7 @@
 
 									<?php while( have_rows('extra_images') ): the_row(); ?>
 
-										<li><img src="<?php the_sub_field('images'); ?>" alt="Extra photos"></li>
+										<li <?php if( get_sub_field('full_width') ) echo 'class="full-width"'; ?>><img src="<?php the_sub_field('images'); ?>" alt="Extra photos"></li>
 
 									<?php endwhile; ?>
 
