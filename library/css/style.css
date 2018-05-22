@@ -1136,7 +1136,8 @@ ul.team {
 .contact-details ul {
   margin: 0; }
   .contact-details ul li {
-    margin-bottom: 1.5em; }
+    margin-bottom: 1.5em;
+    list-style: none; }
     .contact-details ul li a {
       color: #000;
       font-weight: 900;
@@ -1263,6 +1264,17 @@ WORDPRESS BODY CLASSES
     .blog .post.main .post-data *, .archive .post.main .post-data * {
       color: #fff; }
 
+.archive .post,
+.blog .post,
+.single .page-title {
+  background: #e67410; }
+
+.post .arrow-up {
+  border-bottom-color: #e67410; }
+
+.single .arrow-down {
+  border-top-color: #e67410; }
+
 .archive .category-poultry.post, .blog .category-poultry.post, .single .category-poultry .page-title {
   background: #bc2844; }
 .category-poultry.post .arrow-up {
@@ -1277,11 +1289,11 @@ WORDPRESS BODY CLASSES
 .single .category-farms .arrow-down {
   border-top-color: #e67410; }
 
-.archive .category-gu-deserts.post, .blog .category-gu-deserts.post, .single .category-gu-deserts .page-title {
+.archive .category-gu-desserts.post, .blog .category-gu-desserts.post, .single .category-gu-desserts .page-title {
   background: #fcc100; }
-.category-gu-deserts.post .arrow-up {
+.category-gu-desserts.post .arrow-up {
   border-bottom-color: #fcc100; }
-.single .category-gu-deserts .arrow-down {
+.single .category-gu-desserts .arrow-down {
   border-top-color: #fcc100; }
 
 .archive .category-feed-milling.post, .blog .category-feed-milling.post, .single .category-feed-milling .page-title {

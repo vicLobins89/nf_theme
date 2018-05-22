@@ -17,8 +17,14 @@
     					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
 						)); ?>
 					</nav>
-
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></p>
+					
+					<?php
+					if($options['copyright_txt']){
+						echo '<p class="source-org copyright">'. $options['copyright_txt'] .'</p>';
+					} else {
+						echo '<p class="source-org copyright">&copy;' . date('Y') . bloginfo( 'name' ) . '</p>';
+					}
+					?>
 
 				</div>
 

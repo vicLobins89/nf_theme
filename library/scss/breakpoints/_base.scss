@@ -278,6 +278,7 @@ ul.team {
 		
 		li {
 			margin-bottom: 1.5em;
+			list-style: none;
 			
 			a {
 				color: $black;
@@ -486,6 +487,12 @@ WORDPRESS BODY CLASSES
 	}
 }
 
+.archive .post,
+.blog .post,
+.single .page-title { background: $orange; }
+.post .arrow-up { border-bottom-color: $orange;}
+.single .arrow-down { border-top-color: $orange;}
+
 .category-poultry {
 	.archive &.post,
 	.blog &.post,
@@ -502,7 +509,7 @@ WORDPRESS BODY CLASSES
 	.single & .arrow-down { border-top-color: $orange;}
 }
 
-.category-gu-deserts {
+.category-gu-desserts {
 	.archive &.post,
 	.blog &.post,
 	.single & .page-title { background: $yellow; }
