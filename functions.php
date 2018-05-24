@@ -66,12 +66,14 @@ if ( ! isset( $content_width ) ) {
 // Thumbnail sizes
 add_image_size( 'square-crop', 600, 600, true );
 add_image_size( 'rect-crop', 600, 345, true );
+add_image_size( 'rect-crop-l', 960, 640, true );
 
 add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'square-crop' => __('600px by 600px'),
-        'rect-crop' => __('600px by 345px')
+        'rect-crop' => __('600px by 345px'),
+        'rect-crop-l' => __('960px by 640px')
     ) );
 }
 

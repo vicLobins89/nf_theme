@@ -125,8 +125,14 @@
 										<?php endif; ?>
 											
 											<div class="col-6">
-												<?php if(get_sub_field('link')) : ?>
-													<a class="image-anchor" href="<?php the_sub_field('link'); ?>" title="<?php the_sub_field('title'); ?>"><img src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('title'); ?>"></a>
+												<?php if(get_sub_field('link')) :
+												$attachment_id = get_sub_field('image');
+												$size = "rect-crop-l";
+												$image = wp_get_attachment_image_src( $attachment_id, $size );
+												?>
+													<a class="image-anchor" href="<?php the_sub_field('link'); ?>" title="<?php the_sub_field('title'); ?>">
+														<img src="<?php echo $image[0]; ?>" alt="<?php the_sub_field('title'); ?>" width="690" height="640">
+													</a>
 												<?php else: ?>
 													<img src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('title'); ?>">
 												<?php endif; ?>
