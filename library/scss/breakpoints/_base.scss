@@ -1009,6 +1009,12 @@ POSTS & CONTENT STYLES
 			td {
 				padding: 7px;
 				border-right: 1px solid $gray;
+				font-size: 1rem;
+				font-weight: 300;
+				
+				p {
+					font-size: 1rem;
+				}
 
 				&:last-child {
 					border-right: 0;
