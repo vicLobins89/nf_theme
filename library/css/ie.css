@@ -220,6 +220,9 @@ GENERAL STYLES
 ul.team li {
   width: 50%; }
 
+.blog .post.col-6, .archive .post.col-6 {
+  width: 49%;
+  margin-right: 0.5%; }
 .blog .post.featured .post-data, .archive .post.featured .post-data {
   position: absolute;
   bottom: 50%;

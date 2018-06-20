@@ -40,7 +40,7 @@
 								
 								
 								<?php // MAIN CONTENT ?>
-								<?php if( !empty(get_the_content()) ) : ?>
+								<?php if( get_the_content() ) : ?>
 										<section class="entry-content wrap cf" itemprop="articleBody">
 											<?php
 											if( !has_post_thumbnail() ) {

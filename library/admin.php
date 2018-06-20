@@ -63,7 +63,7 @@ function bones_rss_dashboard_widget() {
 
 // calling all custom dashboard widgets
 function bones_custom_dashboard_widgets() {
-	wp_add_dashboard_widget( 'bones_rss_dashboard_widget', __( 'Bon Appetit', 'bonestheme' ), 'bones_rss_dashboard_widget' );
+//	wp_add_dashboard_widget( 'bones_rss_dashboard_widget', __( 'Bon Appetit', 'bonestheme' ), 'bones_rss_dashboard_widget' );
 }
 
 
