@@ -499,6 +499,14 @@ CSS3 GRADIENTS
 BOX SIZING
 *********************/
 /* @include box-sizing(border-box); */
+/*********************
+VENDOR
+*********************/
+/*
+.selector {
+  @include prefix(transform, rotate(45deg), webkit ms);
+}
+*/
 /******************************************************************
 Site Name: Honey
 Author: Vic Lobins
@@ -1154,12 +1162,76 @@ ul.team {
         background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAUCAYAAAB4d5a9AAAACXBIWXMAAAsSAAALEgHS3X78AAAA/ElEQVQ4y62V0Q2EIAyG3eAcwREcwREcwRFMbgFGcARHcARHYARffHcDriStabiCrfrwRwTsV36gViGEav9+mvjUCubXIAc6QAEV247NaUBTbFPHDBoMAM+Cp/Js3HHIhp2jAjIVAFxrjBeTpw/54BKzLUAOJYRWVUuQ098UBu+tFcDtWjITD9ov3EgLpKPkeIYWGzQ6TywdtfA2hNt8ZzM12iSI9lhqNUuQqwtmVf8HYaD5batSSPfSKlwWgqD1IcBLVUIqfk9A7SWEwYZCFcgpW8VzpXww3p3ib6LCQkhajMG3nEUppLlhjVilL+1C2IgbL63G4z3qNYG5fiYs3T9GgYFxAAAAAElFTkSuQmCC"); }
 
 .job-vacancies {
-  font-size: 80%; }
-  .job-vacancies .vacancies {
+  font-size: 75%;
+  padding-top: 0 !important; }
+
+.vacancies-content {
+  padding-top: 0;
+  padding-left: 2rem; }
+  @media only screen and (max-width: 768px) {
+    .vacancies-content {
+      padding-left: 0;
+      margin-top: 2rem; } }
+  .vacancies-content .vacancies {
     border-bottom: 1px solid #e67410;
-    padding: 1em 0; }
-  .job-vacancies p {
+    padding: 1em 0 2em;
+    margin-bottom: 2em; }
+  .vacancies-content h2 {
+    color: #e67410;
+    font-weight: bold; }
+  .vacancies-content p {
     margin-bottom: 1em !important; }
+  .vacancies-content li {
+    margin-bottom: .75rem !important; }
+
+.sort-by {
+  width: 200px;
+  border-radius: 0;
+  font-weight: bold; }
+
+.filters {
+  background: #e6e6e6;
+  padding: 1rem; }
+  .filters h3 {
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom: 1px solid #a1a1a1;
+    padding-bottom: .5rem; }
+  .filters .filter {
+    padding: 0;
+    font-size: .8rem; }
+    .filters .filter h4, .filters .filter li {
+      font-size: 1rem;
+      margin: .5em 0; }
+    .filters .filter li {
+      list-style-type: none;
+      cursor: pointer;
+      position: relative; }
+      .filters .filter li.active .checkmark:after {
+        left: 5px;
+        top: 1px;
+        width: 4px;
+        height: 8px;
+        border: solid #e67410;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      .filters .filter li .checkmark {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 17px;
+        width: 18px;
+        background-color: #fff;
+        border: 1px solid #9a9a9a; }
+        .filters .filter li .checkmark:after {
+          content: '';
+          position: absolute; }
+    .filters .filter.filter-locations {
+      border-bottom: 1px solid #a1a1a1;
+      padding-bottom: 1rem; }
 
 .location-cat {
   padding-right: 2em; }

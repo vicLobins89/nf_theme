@@ -306,15 +306,102 @@ ul.team {
 }
 
 .job-vacancies {
-    font-size: 80%;
+    font-size: 75%;
+	padding-top: 0 !important;
+}
+
+.vacancies-content {
+	padding-top: 0;
+	padding-left: 2rem;
+	
+	@media only screen and (max-width: 768px) {
+		padding-left: 0;
+		margin-top: 2rem;
+	}
 	
 	.vacancies {
 		border-bottom: 1px solid $orange;
-		padding: 1em 0;
+		padding: 1em 0 2em;
+		margin-bottom: 2em;
+	}
+	
+	h2 {
+		color: $orange;
+		font-weight: bold;
 	}
 	
 	p {
 		margin-bottom: 1em !important;
+	}
+	
+	li {
+		margin-bottom: .75rem !important;
+	}
+}
+
+.sort-by {
+	width: 200px;
+	border-radius: 0;
+	font-weight: bold;
+}
+
+.filters {
+	background: $light-gray;
+	padding: 1rem;
+	
+	h3 {
+		font-size: 2em;
+		font-weight: bold;
+		border-bottom: 1px solid lighten($gray, 50%);
+		padding-bottom: .5rem;
+	}
+	
+	.filter {
+		padding: 0;
+		font-size: .8rem;
+		
+		h4, li {
+			font-size: 1rem;
+			margin: .5em 0;
+		}
+		
+		li {
+			list-style-type: none;
+			cursor: pointer;
+			position: relative;
+			
+			&.active {			
+				.checkmark:after {
+					left: 5px;
+					top: 1px;
+					width: 4px;
+					height: 8px;
+					border: solid $orange;
+					border-width: 0 2px 2px 0;
+					@include prefix(transform, rotate(45deg), webkit moz ms);
+				}
+			}
+			
+			.checkmark {
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 17px;
+				width: 18px;
+				background-color: $white;
+				border: 1px solid darken($light-gray, 30%);
+				
+				&:after {
+					content: '';
+					position: absolute;
+				}
+			}
+		}
+		
+		&.filter-locations {
+			border-bottom: 1px solid lighten($gray, 50%);
+			padding-bottom: 1rem;
+		}
 	}
 }
 
@@ -1477,52 +1564,52 @@ SIDEBARS & ASIDES
 
 .sidebar {}
 
-	.widgettitle {
-		border-bottom: 1px solid $orange;
-		margin-bottom: 0.75em;
-		font-weight: 100;
-		font-size: 1.5em;
-	}
+.widgettitle {
+	border-bottom: 1px solid $orange;
+	margin-bottom: 0.75em;
+	font-weight: 100;
+	font-size: 1.5em;
+}
 
-	.widget {
-		padding: 0 10px;
-		margin: 2.2em 0;
+.widget {
+	padding: 0 10px;
+	margin: 2.2em 0;
 
-		ul {
-			li {
-				margin-bottom: 0.9em;
+	ul {
+		li {
+			margin-bottom: 0.9em;
 
-				&:first-child {}
-				&:last-child {}
-				a {
-					font-weight: 900;
-					font-size: 1.35em;
-					color: $black;
-					&:before {
-						content: '> ';
-					}
-					&:hover {
-						text-decoration: underline;
-					}
+			&:first-child {}
+			&:last-child {}
+			a {
+				font-weight: 900;
+				font-size: 1.35em;
+				color: $black;
+				&:before {
+					content: '> ';
 				}
-				/* deep nesting */
-
-				ul {
-					margin-top: 0.75em;
-					padding-left: 1em;
+				&:hover {
+					text-decoration: underline;
 				}
+			}
+			/* deep nesting */
+
+			ul {
+				margin-top: 0.75em;
+				padding-left: 1em;
 			}
 		}
 	}
+}
 
-	.no-widgets {
-		background-color: $white;
-		padding: 1.5em;
-		text-align: center;
-		border: 1px solid $border-color;
-		border-radius: 2px;
-		margin-bottom: 1.5em;
-	}
+.no-widgets {
+	background-color: $white;
+	padding: 1.5em;
+	text-align: center;
+	border: 1px solid $border-color;
+	border-radius: 2px;
+	margin-bottom: 1.5em;
+}
 
 /*********************
 FOOTER STYLES

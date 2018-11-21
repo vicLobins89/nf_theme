@@ -56,25 +56,64 @@
 								<?php if( have_rows('vacancies') ): ?>
 
 									<section class="entry-content job-vacancies wrap cf">
+										
+										<div class="filters col-3 cf">
+											<h3>Filters</h3>
+											<?php
+											$location = '';
+											$type = '';
+											while( have_rows('vacancies') ) {
+												the_row();
+												$location .= get_sub_field('location').', ';
+												$type .= get_sub_field('job_type').', ';
+											}
+											
+											$location = array_unique(explode(', ', $location));
+											array_pop($location);
+											sort($location);
+											
+											$type = array_unique(explode(', ', $type));
+											array_pop($type);
+											sort($type);
+											
+											echo '<ul class="filter filter-locations"><h4>Location</h4>';
+											foreach($location as $key => $val) {
+												echo '<li data-location="'.$val.'">'.$val.'<span class="checkmark"></span></li>';
+											}
+											echo '</ul>';
+											
+											echo '<ul class="filter filter-types"><h4>Job type</h4>';
+											foreach($type as $key => $val) {
+												echo '<li data-type="'.$val.'">'.$val.'<span class="checkmark"></span></li>';
+											}
+											echo '</ul>';
+											?>
+										</div>
+										
+										<div class="vacancies-content col-9 cf">
+											<select class="sort-by">
+												<option value="new">Newest First</option>
+												<option value="old">Oldest First</option>
+											</select>
+											
+											<div class="vacancies-wrapper">
 
-									<?php while( have_rows('vacancies') ): the_row();
-										$date = get_sub_field('data_posted', false, false);
-										$date = new DateTime($date);
-									?>
+												<?php while( have_rows('vacancies') ): the_row();
+													$date = get_sub_field('data_posted', false, false);
+													$date = new DateTime($date);
+												?>
 
-										<div class="vacancies cf">
-											<div class="col-4">
-												<p><strong><?php the_sub_field('job_title'); ?></strong></p>
-												<p>Date posted: <?php echo $date->format('j M Y'); ?></p>
-												<p><a href="mailto:<?php the_sub_field('contact_email'); ?>"><?php the_sub_field('contact_email'); ?></a></p>
-											</div>
+												<div class="vacancies cf"<?php echo ' data-date="'.$date->format('Ymd').'" data-location="'.get_sub_field('location').'" data-type="'.get_sub_field('job_type').'"'; ?>>
+													<h2><?php the_sub_field('job_title'); ?></h2>
+													<p><strong>Date posted: <?php echo $date->format('j M Y'); ?></strong></p>
+													<p>Contact: <a href="mailto:<?php the_sub_field('contact_email'); ?>"><?php the_sub_field('contact_email'); ?></a></p>
+													<?php the_sub_field('job_description'); ?>
+												</div>
 
-											<div class="col-8">
-												<?php the_sub_field('job_description'); ?>
+												<?php endwhile; ?>
+
 											</div>
 										</div>
-
-									<?php endwhile; ?>
 
 									</section>
 

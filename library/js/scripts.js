@@ -39,6 +39,114 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
+	// Menu Functions
+	
+	$('li.menu-item-has-children > a').on('click', function(e){
+		$('li.menu-item-has-children a').not(this).removeClass('active');
+		$(this).toggleClass('active');
+		e.preventDefault();
+	});
+  
+	$('.menu-button').on('click', function(e){
+		$(this).parents('.header').toggleClass('menu-active');
+		e.preventDefault();
+	});
+	
+	$('.sub-menu .current-page-ancestor').parent().prev('a').css('color', '#e67410');
+	
+	
+	// Vacancies filter
+	
+	var cont = $(".vacancies-wrapper"),
+		arr = $.makeArray(cont.children(".vacancies")),
+		$vacancies = $('.vacancies'),
+		$filtersLocation = $('.filter li[data-location]'),
+		$filtersType = $('.filter li[data-type]'),
+		filterLocation,
+		filterType;
+	
+	
+	//// Sorting
+	$('select.sort-by').on('change', function() {
+		if(this.value === 'new') {
+			sortByDate('desc');
+		} else {
+			sortByDate('asc');
+		}
+	});
+	
+	function sortByDate(direction) {
+		arr.sort(function(a, b) {
+			var textA = +$(a).data('date');
+			var textB = +$(b).data('date');
+			
+			if( direction === 'asc' ) {
+				if (textA < textB) { return -1; }
+				if (textA > textB) { return 1; }
+			} else {
+				if (textA < textB) { return 1; }
+				if (textA > textB) { return -1; }
+			}
+
+			return 0;
+		});
+
+		cont.empty();
+
+		$.each(arr, function() {
+			cont.append(this);
+		});
+	}
+	
+	sortByDate('desc');
+	
+	
+	//// Filtering
+	if($vacancies.length) {
+		$filtersLocation.on('click', function(){
+			$(this).toggleClass('active');
+			$filtersLocation.not(this).removeClass('active');
+			
+			if( $(this).hasClass('active') ) { filterLocation = $(this).data('location'); }
+			else { filterLocation = undefined; }
+			
+			checkFilter(filterLocation, filterType);
+		});
+		
+		$filtersType.on('click', function(){
+			$(this).toggleClass('active');
+			$filtersType.not(this).removeClass('active');
+			
+			if( $(this).hasClass('active') ) { filterType = $(this).data('type'); }
+			else { filterType = undefined; }
+			
+			checkFilter(filterLocation, filterType);
+		});
+	}
+	
+	function checkFilter(location, type) {	
+		var $vacanciesLocations = $('.vacancies[data-location="'+location+'"]');
+		var $vacanciesTypes = $('.vacancies[data-type="'+type+'"]');
+		
+		if( location ) {
+			$vacancies.not($vacanciesLocations).hide();
+			$vacanciesLocations.show();
+			
+			if( type ) {
+				$vacancies.not($vacanciesTypes).hide();
+			}
+		} else if( type ) {
+			$vacancies.not($vacanciesTypes).hide();
+			$vacanciesTypes.show();
+			
+			if( location ) {
+				$vacancies.not($vacanciesLocations).hide();
+			}
+		} else if ( location === undefined && type === undefined  ) {
+			$vacancies.show();
+		}
+	}
+	
 	// Slider link
 	
 	if( $('.metaslider').length ) {
@@ -62,21 +170,6 @@ jQuery(document).ready(function($) {
 		$('.location-cat a').not(this).parent().removeClass('active');
 		$(this).parent().toggleClass('active');
 	});
-	
-	// Menu Functions
-	
-	$('li.menu-item-has-children > a').on('click', function(e){
-		$('li.menu-item-has-children a').not(this).removeClass('active');
-		$(this).toggleClass('active');
-		e.preventDefault();
-	});
-  
-	$('.menu-button').on('click', function(e){
-		$(this).parents('.header').toggleClass('menu-active');
-		e.preventDefault();
-	});
-	
-	$('.sub-menu .current-page-ancestor').parent().prev('a').css('color', '#e67410');
 	
 	function onLoadAndResize() {
 		viewport = updateViewportDimensions();

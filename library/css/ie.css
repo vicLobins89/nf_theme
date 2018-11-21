@@ -68,6 +68,14 @@ CSS3 GRADIENTS
 BOX SIZING
 *********************/
 /* @include box-sizing(border-box); */
+/*********************
+VENDOR
+*********************/
+/*
+.selector {
+  @include prefix(transform, rotate(45deg), webkit ms);
+}
+*/
 /******************************************************************
 Site Name: Honey
 Author: Vic Lobins
