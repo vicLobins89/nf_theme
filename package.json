@@ -1,0 +1,23 @@
+{
+  "name": "nf_theme",
+  "version": "1.0.0",
+  "description": "WordPress theme for Noble Foods website - Vic Lobins",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch library/scss -o library/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vicLobins89/nf_theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vicLobins89/nf_theme/issues"
+  },
+  "homepage": "https://github.com/vicLobins89/nf_theme#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

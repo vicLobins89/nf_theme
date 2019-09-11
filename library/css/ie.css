@@ -110,10 +110,12 @@ POSTS & CONTENT STYLES
   margin-right: 1.5em;
   display: inline;
   float: left; }
+
 .entry-content .alignright, .entry-content img.alignright {
   margin-left: 1.5em;
   display: inline;
   float: right; }
+
 .entry-content .aligncenter, .entry-content img.aligncenter {
   margin-right: auto;
   margin-left: auto;
@@ -139,6 +141,7 @@ GENERAL STYLES
   width: 100%;
   max-width: 100%;
   left: auto; }
+
 .featured-image .page-title {
   position: absolute;
   background: #e67410;
@@ -231,12 +234,15 @@ ul.team li {
 .blog .post.col-6, .archive .post.col-6 {
   width: 49%;
   margin-right: 0.5%; }
+
 .blog .post.featured .post-data, .archive .post.featured .post-data {
   position: absolute;
-  bottom: 50%;
-  left: 0;
+  bottom: 3rem;
+  left: 2rem;
   max-width: 45%;
-  max-width: 45vw; }
+  max-width: 45vw;
+  transform: scale(1.2);
+  transform-origin: left; }
   .blog .post.featured .post-data .arrow-up, .archive .post.featured .post-data .arrow-up {
     transform: rotate(90deg);
     left: auto;
@@ -244,6 +250,7 @@ ul.team li {
     bottom: 50%;
     top: auto;
     margin-bottom: -1.3em; }
+
 .blog .post.featured .post-image img, .archive .post.featured .post-image img {
   position: relative;
   width: 100%;
@@ -292,10 +299,12 @@ nav.main {
 
 .nav ul {
   margin-top: 0; }
+
 .nav li {
   float: left; }
   .nav li a {
     border-bottom: 0; }
+
 .nav.main-nav {
   float: right;
   margin: 70px -1.4em 0 0;
@@ -398,6 +407,7 @@ nav.main {
   .nav.main-nav li.current_page_ancestor a,
   .nav.main-nav li.current-menu-ancestor a {
     color: #e67410; }
+
 .nav.socket-nav {
   display: block !important;
   position: absolute;
@@ -516,6 +526,7 @@ nav.main {
 
 .page-links [class*="col-"] {
   font-size: 85%; }
+
 .page-links h2 {
   background-size: 40px;
   padding-right: 50px; }

@@ -182,10 +182,12 @@ ul.team {
 	.post.featured {	
 		.post-data {
 			position: absolute;
-			bottom: 50%;
-			left: 0;
+			bottom: 3rem;
+			left: 2rem;
 			max-width: 45%;
 			max-width: 45vw;
+			transform: scale(1.2);
+    		transform-origin: left;
 
 			.arrow-up {
 				transform: rotate(90deg);

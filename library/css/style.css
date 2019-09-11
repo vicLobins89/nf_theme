@@ -562,6 +562,7 @@ Stylesheet: Grid Stylesheet
   [class*="col-"] {
     float: none;
     width: 100%; } }
+
 /* Portrait tablet to landscape */
 /*********************
 IMPORTING MODULES
@@ -1000,7 +1001,8 @@ hr {
     border-left: 3em solid transparent;
     border-right: 3em solid transparent;
     border-bottom: 3em solid black; }
-  html[data-useragent*='MSIE 10.0'] .arrow-up, .lt-ie9 .arrow-up {
+  html[data-useragent*='MSIE 10.0'] .arrow-up,
+  .lt-ie9 .arrow-up {
     display: none; }
 
 .page-links {
@@ -1049,7 +1051,8 @@ hr {
     max-width: none;
     margin: auto;
     line-height: 1.2; }
-    html[data-useragent*='MSIE 10.0'] .page-links.reverse p, .lt-ie9 .page-links.reverse p {
+    html[data-useragent*='MSIE 10.0'] .page-links.reverse p,
+    .lt-ie9 .page-links.reverse p {
       padding-top: 10%; }
 
 .featured-image {
@@ -1283,6 +1286,7 @@ WORDPRESS BODY CLASSES
 /* home page */
 .blog [class*="col-"], .archive [class*="col-"] {
   padding: 0; }
+
 .blog .post, .archive .post {
   position: relative; }
   .blog .post img, .archive .post img {
@@ -1347,45 +1351,69 @@ WORDPRESS BODY CLASSES
 .single .arrow-down {
   border-top-color: #e67410; }
 
-.archive .category-poultry.post, .blog .category-poultry.post, .single .category-poultry .page-title {
+.archive .category-poultry.post,
+.blog .category-poultry.post,
+.single .category-poultry .page-title {
   background: #bc2844; }
+
 .category-poultry.post .arrow-up {
   border-bottom-color: #bc2844; }
+
 .single .category-poultry .arrow-down {
   border-top-color: #bc2844; }
 
-.archive .category-farms.post, .blog .category-farms.post, .single .category-farms .page-title {
+.archive .category-farms.post,
+.blog .category-farms.post,
+.single .category-farms .page-title {
   background: #e67410; }
+
 .category-farms.post .arrow-up {
   border-bottom-color: #e67410; }
+
 .single .category-farms .arrow-down {
   border-top-color: #e67410; }
 
-.archive .category-gu-desserts.post, .blog .category-gu-desserts.post, .single .category-gu-desserts .page-title {
+.archive .category-gu-desserts.post,
+.blog .category-gu-desserts.post,
+.single .category-gu-desserts .page-title {
   background: #fcc100; }
+
 .category-gu-desserts.post .arrow-up {
   border-bottom-color: #fcc100; }
+
 .single .category-gu-desserts .arrow-down {
   border-top-color: #fcc100; }
 
-.archive .category-feed-milling.post, .blog .category-feed-milling.post, .single .category-feed-milling .page-title {
+.archive .category-feed-milling.post,
+.blog .category-feed-milling.post,
+.single .category-feed-milling .page-title {
   background: #0a5672; }
+
 .category-feed-milling.post .arrow-up {
   border-bottom-color: #0a5672; }
+
 .single .category-feed-milling .arrow-down {
   border-top-color: #0a5672; }
 
-.archive .category-eggs.post, .blog .category-eggs.post, .single .category-eggs .page-title {
+.archive .category-eggs.post,
+.blog .category-eggs.post,
+.single .category-eggs .page-title {
   background: #35a3a0; }
+
 .category-eggs.post .arrow-up {
   border-bottom-color: #35a3a0; }
+
 .single .category-eggs .arrow-down {
   border-top-color: #35a3a0; }
 
-.archive .category-our-business.post, .blog .category-our-business.post, .single .category-our-business .page-title {
+.archive .category-our-business.post,
+.blog .category-our-business.post,
+.single .category-our-business .page-title {
   background: #e67410; }
+
 .category-our-business.post .arrow-up {
   border-bottom-color: #e67410; }
+
 .single .category-our-business .arrow-down {
   border-top-color: #e67410; }
 
@@ -1445,10 +1473,10 @@ a, a:visited {
   /* mobile tap color */ }
   a:link, a:visited:link {
     /*
-    this highlights links on iPhones/iPads.
-    so it basically works like the :hover selector
-    for mobile devices.
-    */
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2); }
 
 /******************************************************************
@@ -1458,9 +1486,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
   font-weight: 500;
   /*
-  be sure to check your weights
-  http://css-tricks.com/watch-your-font-weight/
-  */
+	be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
   /* removing text decoration from all headline links */ }
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
     text-decoration: none; }
@@ -1621,6 +1649,7 @@ POSTS & CONTENT STYLES
 *********************/
 .hentry header {
   padding: 1.5em; }
+
 .hentry footer {
   padding: 1.5em; }
   .hentry footer p {
@@ -1803,6 +1832,7 @@ PAGE NAVI STYLES
 /* fallback previous & next links */
 .wp-prev-next .prev-link {
   float: left; }
+
 .wp-prev-next .next-link {
   float: right; }
 
@@ -2053,15 +2083,15 @@ LARGER MOBILE DEVICES
 *********************/
 @media only screen and (min-width: 481px) {
   /******************************************************************
-  Site Name: Honey
-  Author: Vic Lobins
-  
-  Stylesheet: 481px and Up Stylesheet
-  
-  ******************************************************************/
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: 481px and Up Stylesheet
+
+******************************************************************/
   /*********************
-  NAVIGATION STYLES
-  *********************/
+NAVIGATION STYLES
+*********************/
   /* .menu is clearfixed inside mixins.scss */
   .menu {
     /* end .menu ul */ }
@@ -2069,11 +2099,10 @@ LARGER MOBILE DEVICES
       /* end .menu ul li */
       /* highlight current page */
       /* end current highlighters */ }
-
   /* end .menu */
   /*********************
-  POSTS & CONTENT STYLES
-  *********************/
+POSTS & CONTENT STYLES
+*********************/
   /* entry content */
   .entry-content .alignleft, .entry-content img.alignleft {
     margin-right: 1.5em;
@@ -2088,26 +2117,26 @@ LARGER MOBILE DEVICES
     margin-left: auto;
     display: block;
     clear: both; }
-
   /* end .entry-content */
   /*********************
-  FOOTER STYLES
-  *********************/
+FOOTER STYLES
+*********************/
   /* end .footer-links */ }
+
 /*********************
 TABLET & SMALLER LAPTOPS
 *********************/
 @media only screen and (min-width: 768px) {
   /******************************************************************
-  Site Name: Honey
-  Author: Vic Lobins
-  
-  Stylesheet: Tablet & Small Desktop Stylesheet
-  
-  ******************************************************************/
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+******************************************************************/
   /*********************
-  GENERAL STYLES
-  *********************/
+GENERAL STYLES
+*********************/
   .featured-image img {
     width: 100%;
     max-width: 100%;
@@ -2135,7 +2164,6 @@ TABLET & SMALLER LAPTOPS
       .single .featured-image .page-title h1 {
         font-size: 2.25rem;
         font-size: 2.5vw; }
-
   .page-links {
     display: flex;
     font-size: 100%; }
@@ -2190,26 +2218,25 @@ TABLET & SMALLER LAPTOPS
       float: left; }
     .page-links img {
       flex-shrink: 0; }
-
   .extra-images li {
     width: 50%; }
     .extra-images li:nth-child(3n+3):last-child {
       width: 100%; }
     .extra-images li.full-width {
       width: 100%; }
-
   ul.team li {
     width: 50%; }
-
   .blog .post.col-6, .archive .post.col-6 {
     width: 49%;
     margin-right: 0.5%; }
   .blog .post.featured .post-data, .archive .post.featured .post-data {
     position: absolute;
-    bottom: 50%;
-    left: 0;
+    bottom: 3rem;
+    left: 2rem;
     max-width: 45%;
-    max-width: 45vw; }
+    max-width: 45vw;
+    transform: scale(1.2);
+    transform-origin: left; }
     .blog .post.featured .post-data .arrow-up, .archive .post.featured .post-data .arrow-up {
       transform: rotate(90deg);
       left: auto;
@@ -2222,19 +2249,16 @@ TABLET & SMALLER LAPTOPS
     width: 100%;
     max-width: 100%;
     left: auto; }
-
   /*********************
-  LAYOUT & GRID STYLES
-  *********************/
+LAYOUT & GRID STYLES
+*********************/
   .wrap {
     width: 760px; }
-
   /*********************
-  HEADER STYLES
-  *********************/
+HEADER STYLES
+*********************/
   #inner-header {
     padding: 0 2.5em; }
-
   #logo {
     margin: 0;
     float: left;
@@ -2243,10 +2267,9 @@ TABLET & SMALLER LAPTOPS
     width: auto; }
     #logo a {
       color: #fff; }
-
   /*********************
-  NAVIGATION STYLES
-  *********************/
+NAVIGATION STYLES
+*********************/
   nav.main {
     visibility: visible;
     opacity: 1;
@@ -2259,10 +2282,8 @@ TABLET & SMALLER LAPTOPS
     overflow-y: visible;
     overflow-x: visible;
     font-size: 91%; }
-
   .nav-icons {
     display: none; }
-
   .nav ul {
     margin-top: 0; }
   .nav li {
@@ -2423,17 +2444,14 @@ TABLET & SMALLER LAPTOPS
         .nav.socket-nav ul.children li:focus a {
           color: #fff;
           background: #e67410; }
-
   /* end .nav */
   /*********************
-  SIDEBARS & ASIDES
-  *********************/
+SIDEBARS & ASIDES
+*********************/
   .sidebar {
     padding: 1.5em 3em; }
-
   .widget ul li {
     /* deep nesting */ }
-
   /* links widget */
   /* meta widget */
   /* pages widget */
@@ -2446,146 +2464,138 @@ TABLET & SMALLER LAPTOPS
   /* search widget */
   /* text widget */
   /*********************
-  FOOTER STYLES
-  *********************/
+FOOTER STYLES
+*********************/
   .footer-links {
     float: right; }
     .footer-links ul li a:hover {
       text-decoration: underline; }
-
   /* end .footer-links */
   .copyright {
     float: left;
     margin: 0; } }
+
 /*********************
 DESKTOP
 *********************/
 @media only screen and (min-width: 1030px) {
   /******************************************************************
-  Site Name: Honey
-  Author: Vic Lobins
-  
-  Stylesheet: Desktop Stylsheet
-  
-  ******************************************************************/
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Desktop Stylsheet
+
+******************************************************************/
   body {
     font-size: 100%; }
-
   .wrap {
     width: 1020px; }
-
   #logo {
     max-width: 170px; }
-
   nav.main {
     font-size: 100%; }
     nav.main .main-nav ul.sub-menu,
     nav.main .main-nav ul.children {
       font-size: 85%;
       top: 131px; }
-
   .nav.socket-nav {
     font-size: 100%;
     right: 2.5em; }
     .nav.socket-nav li a {
       font-size: 85%; }
-
   .page-links [class*="col-"] {
     font-size: 85%; }
   .page-links h2 {
     background-size: 40px;
     padding-right: 50px; }
-
   .featured-image .page-title {
     left: 5%; }
     .featured-image .page-title .arrow-down {
       left: 2.5rem; } }
+
 /*********************
 LARGE VIEWING SIZE
 *********************/
 @media only screen and (min-width: 1240px) {
   /******************************************************************
-  Site Name: Honey
-  Author: Vic Lobins
-  
-  Stylesheet: Super Large Monitor Stylesheet
-  
-  ******************************************************************/
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Super Large Monitor Stylesheet
+
+******************************************************************/
   .page-links [class*="col-"] {
     font-size: 100%; }
-
   .entry-content {
     padding: 5em 3em; }
-
   .featured-image .page-title {
     left: 10%; }
     .featured-image .page-title .arrow-down {
       left: 3.5rem; }
-
   nav.main .main-nav ul.sub-menu,
   nav.main .main-nav ul.children {
     font-size: 100%; }
-
   .blog .post img {
     width: 100%; } }
+
 /*********************
 RETINA (2x RESOLUTION DEVICES)
 *********************/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /******************************************************************
-  Site Name: Honey
-  Author: Vic Lobins
-  
-  Stylesheet: Retina Screens & Devices Stylesheet
-  
-  ******************************************************************/
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Retina Screens & Devices Stylesheet
+
+******************************************************************/
   /* 
-  
-  EXAMPLE 
-  Let's say you have an image and you need to make sure it looks ok
-  on retina screens. Let's say we have an icon which dimension are
-  24px x 24px. In your regular stylesheets, it would look something
-  like this:
-  
-  .icon {
-  	width: 24px;
-  	height: 24px;
-  	background: url(img/test.png) no-repeat;
-  }
-  
-  For retina screens, we have to make some adjustments, so that image
-  doesn't look blurry. So, taking into account the image above and the
-  dimensions, this is what we would put in our retina stylesheet:
-  
-  .icon {
-  	background: url(img/test@2x.png) no-repeat;
-  	background-size: 24px 24px;
-  }
-  
-  So, you would create the same icon, but at double the resolution, meaning 
-  it would be 48px x 48px. You'd name it the same, but with a @2x at the end
-  (this is pretty standard practice). Set the background image so it matches
-  the original dimensions and you are good to go. 
-  
-  */ }
+
+EXAMPLE 
+Let's say you have an image and you need to make sure it looks ok
+on retina screens. Let's say we have an icon which dimension are
+24px x 24px. In your regular stylesheets, it would look something
+like this:
+
+.icon {
+	width: 24px;
+	height: 24px;
+	background: url(img/test.png) no-repeat;
+}
+
+For retina screens, we have to make some adjustments, so that image
+doesn't look blurry. So, taking into account the image above and the
+dimensions, this is what we would put in our retina stylesheet:
+
+.icon {
+	background: url(img/test@2x.png) no-repeat;
+	background-size: 24px 24px;
+}
+
+So, you would create the same icon, but at double the resolution, meaning 
+it would be 48px x 48px. You'd name it the same, but with a @2x at the end
+(this is pretty standard practice). Set the background image so it matches
+the original dimensions and you are good to go. 
+
+*/ }
+
 /*********************
 PRINT STYLESHEET
 *********************/
 @media print {
   /******************************************************************
-  Site Name: Honey
-  Author: Vic Lobins
-  
-  Stylesheet: Print Stylesheet
-  
-  ******************************************************************/
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Print Stylesheet
+
+******************************************************************/
   * {
     background: transparent !important;
     color: black !important;
     text-shadow: none !important;
     filter: none !important;
     -ms-filter: none !important; }
-
   a, a:visited {
     color: #444 !important;
     text-decoration: underline; }
@@ -2593,35 +2603,27 @@ PRINT STYLESHEET
       content: " (" attr(href) ")"; }
     a abbr[title]:after, a:visited abbr[title]:after {
       content: " (" attr(title) ")"; }
-
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: ""; }
-
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
-
   thead {
     display: table-header-group; }
-
   tr, img {
     page-break-inside: avoid; }
-
   img {
     max-width: 100% !important; }
-
   @page {
     margin: 0.5cm; }
   p, h2, h3 {
     orphans: 3;
     widows: 3; }
-
   h2,
   h3 {
     page-break-after: avoid; }
-
   .sidebar,
   .page-navigation,
   .wp-prev-next,

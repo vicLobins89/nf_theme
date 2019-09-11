@@ -189,10 +189,7 @@ jQuery(document).ready(function($) {
 		}
 		
 		// News page title
-		var postDataHeight = $('.post.featured .post-data').outerHeight();
-		if( viewport.width >= 768 ) {
-			$('.post.featured .post-data').css('margin-bottom', -postDataHeight/2);
-			
+		if( viewport.width >= 768 ) {		
 			//Menu fix
 			$('.sub-menu').each(function() {
 				var $this = $(this);
@@ -201,8 +198,6 @@ jQuery(document).ready(function($) {
 					$this.find('img').css('width', 20+'%');
 				}
 			});
-		} else {
-			$('.post.featured .post-data').css('margin-bottom', 'auto');
 		}
 	}
 	
